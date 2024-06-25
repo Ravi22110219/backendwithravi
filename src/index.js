@@ -1,8 +1,9 @@
-import dotenv from 'dotenv';
-dotenv.config();
-console.log(process.env.MONGODB_URI);  // Add this line to verify the URI is loaded correctly
-import connectDB from './db/index.js';
-import { app } from './app.js';
+import dotenv from "dotenv"
+import connectDB from "./db/index.js";
+import {app} from './app.js'
+dotenv.config({
+    path: './.env'
+})
 
 // Connect to MongoDB
 connectDB()
